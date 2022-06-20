@@ -6,7 +6,7 @@ def productList(productId = None):
     cur = conn.cursor()
     cur.execute("SELECT * FROM products ;")
     result = cur.fetchall()
-    if productId == None:
+    if productId is None:
         print("Список продуктов:")
         for i in range(0, len(result)):
             print(result[i])
